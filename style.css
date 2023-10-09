@@ -243,3 +243,20 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
+.ingredient-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* min-height: 45vh; */
+  gap: 40px;
+}
+
+.ingredient-list {
+  margin: 10px;
+  background: black;
+  color: #eff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
