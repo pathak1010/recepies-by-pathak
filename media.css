@@ -1,0 +1,34 @@
+.container {
+  width: 205vw;
+}
+
+.recipe-card {
+  width: 135vw;
+  height: 65vh;
+  position: absolute;
+  top: 1000px;
+  bottom: 0;
+  left: 145px;
+  right: 0;
+}
+
+.dropdown-menu ul li a {
+  padding: 10px 80px;
+  width: 25vw;
+}
+
+.dropdown-menu-active {
+  width: 30vw;
+}
+
+.categories-container {
+  height: 230vh;
+}
+
+.expanded-view {
+  height: 900vh;
+}
+
+.cuisine-content {
+  padding-top: 50px;
+}
