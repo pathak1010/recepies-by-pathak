@@ -59,15 +59,20 @@ function showAllIngredients(data) {
     data.forEach((element) => {
       const ingredientElement = document.createElement('span');
       ingredientElement.innerHTML = `
-                  <p class = 'ingredient-list' id='added-ingredients' >${element.strIngredient}</p>
+                  <p class = 'ingredient-list new-el-test' id='added-ingredients' elementName="${element.strIngredient}">${element.strIngredient}</p>
                   `;
       list.append(ingredientElement);
     });
     const ingName = document.querySelectorAll('#added-ingredients');
-
+    // const ingName = document.querySelectorAll('#added-ingredients');
+    document.querySelectorAll('.new-el-test').forEach((ele) => {
+      ele.addEventListener('click', (e) => {
+        test(e.target.getAttribute('elementName'));
+      });
+    });
     ingName.forEach((ing) => {
       ing.addEventListener('click', showRecipeModal);
-      ing.addEventListener('click', showFetchedRecipe);
+      // ing.addEventListener('click', showFetchedRecipe);
     });
   } else {
     console.error('Data is not defined or is not an array.');

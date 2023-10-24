@@ -123,7 +123,7 @@ function displayRecipe(data) {
     fetchedCategory.classList.add('recipe-displayed');
     document.quer;
     fetchedCategory.innerHTML = `
-    <a href="">
+    <a href="./Recipe-page?=${meal.strMeal}">
       <img src="${meal.strMealThumb}" alt="">
       <h4>${meal.strMeal}</h4>
     </a>
