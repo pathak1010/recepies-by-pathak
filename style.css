@@ -200,7 +200,7 @@ body {
 .dropdown-menu li {
   list-style: none;
   padding: 20px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
 }
 
 .dropdown-menu ul li a {
@@ -455,6 +455,11 @@ body {
   padding: 10px 20px;
 }
 
+.close-modal i {
+  rotate: 45deg;
+  color: red;
+}
+
 .modal-container button:hover {
   cursor: pointer;
 }
@@ -502,6 +507,7 @@ body {
   height: 100px;
   width: 100px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .modal-content a h4 {
@@ -517,8 +523,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 260px;
-  height: 165px;
+  width: 280px;
+  height: 225px;
 }
 
 @keyframes animate1 {
@@ -539,4 +545,108 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.recipe-page-container {
+  /* background: #f896c8; */
+  background: linear-gradient(#f896c8, #c757e5);
+  height: 150vh;
+}
+
+.name-and-instructions {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.name img {
+  height: 60px;
+  width: 60px;
+}
+
+.instructions {
+  padding-top: 80px;
+  width: 80vw;
+}
+
+.recipe-ingredients {
+  padding-top: 80px;
+  padding-left: 30px;
+  text-align: center;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-ingredients ul {
+  list-style: circle;
+  padding-left: 250px;
+}
+
+.video {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.show-recipe-button-modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgb(27, 27, 27, 0.95);
+  display: flex;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #eef;
+}
+.show-recipe-button-modal-active {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgb(27, 27, 27, 0.95);
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #eef;
+}
+
+.show-recipe-button-modal-active button {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #c850c0;
+  color: #eef;
+}
+
+.show-recipe-button-modal-active button:hover {
+  cursor: pointer;
 }

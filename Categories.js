@@ -123,14 +123,17 @@ function displayRecipe(data) {
     fetchedCategory.classList.add('recipe-displayed');
     document.quer;
     fetchedCategory.innerHTML = `
-    <a href="./Recipe-page?=${meal.strMeal}">
+    <a href="./Recipe-Page.html?id=${meal.idMeal}" target="_blank">
       <img src="${meal.strMealThumb}" alt="">
-      <h4>${meal.strMeal}</h4>
+      <h4 id="${meal.idMeal}">${meal.strMeal}</h4>
     </a>
     `;
-    categoryName.appendChild(fetchedCategory);
+
     fetchedCategory.style.borderRadius = `${Math.ceil(
       Math.random() * 100 + 1
-    )}`;
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px ${Math.ceil(
+      Math.random() * 100 + 1
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px`;
+    categoryName.appendChild(fetchedCategory);
   });
 }

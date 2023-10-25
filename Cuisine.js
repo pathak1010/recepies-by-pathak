@@ -144,11 +144,16 @@ function showCuisineRecipe(data) {
     const displayedCuisine = document.createElement('div');
     displayedCuisine.classList.add('recipe-displayed');
     displayedCuisine.innerHTML = `
-      <a href="">
+      <a href="./Recipe-Page.html?id=${meal.idMeal}" target = "_blank">
         <img src="${meal.strMealThumb}" alt="">
         <h4>${meal.strMeal}</h4>
       </a>
       `;
+    displayedCuisine.style.borderRadius = `${Math.ceil(
+      Math.random() * 100 + 1
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px ${Math.ceil(
+      Math.random() * 100 + 1
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px`;
     CuisineElement.appendChild(displayedCuisine);
   });
 }

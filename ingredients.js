@@ -223,11 +223,16 @@ function showFetchedRecipe(data) {
     const fetchedRecipe = document.createElement('div');
     fetchedRecipe.classList.add('recipe-displayed');
     fetchedRecipe.innerHTML = `
-    <a href="">
+    <a href="./Recipe-Page.html?id=${meal.idMeal}" target = "_blank">
       <img src="${meal.strMealThumb}" alt="">
-      <a>${meal.strMeal} </a>
+      <a href="./Recipe-Page.html?id=${meal.idMeal}" target="_blank">${meal.strMeal} </a>
     </a>
     `;
+    fetchedRecipe.style.borderRadius = `${Math.ceil(
+      Math.random() * 100 + 1
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px ${Math.ceil(
+      Math.random() * 100 + 1
+    )}px ${Math.ceil(Math.random() * 100 + 1)}px`;
     recipeList.appendChild(fetchedRecipe);
   });
 
