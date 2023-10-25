@@ -32,8 +32,11 @@ function showRecipe(data) {
   const videoDiv = document.querySelector('.video');
   const videoText = document.createElement('h4');
   videoText.textContent = "Here's a video to help you with the recipe";
-  const video = document.createElement('iframe');
-  video.src = `${data.meals[0].strYoutube}`;
+  const video = document.createElement('button');
+  const videoLink = document.createElement('a');
+  videoLink.textContent = 'Click here';
+  videoLink.href = `${data.meals[0].strYoutube}`;
+  video.append(videoLink);
   // video.textContent = `Watch it here`;
   videoDiv.appendChild(videoText);
   videoDiv.appendChild(video);
